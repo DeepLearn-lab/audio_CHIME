@@ -1,47 +1,17 @@
 '''
-SUMMARY:  config file
-AUTHOR:   Aditya Arora
+SUMMARY:  main file
+AUTHOR:   DL-LAB
 Created:  2018.03.09
-Modified: 2018.03.09
+Modified: 2018.03.10
 --------------------------------------
 '''
 
 
 import numpy as np
-import config as cfg
-import sys
-import cPickle
-import os
-import csv
 import keras
-import models as M
-import matplotlib.pyplot as plt
-from keras.utils import to_categorical
-from sklearn.metrics import roc_curve,auc,roc_auc_score
-from sklearn.preprocessing import label_binarize
 
 from keras.models import Model,Sequential
-from keras.layers import Dense,Dropout
-from keras import optimizers
-from keras.layers import Convolution1D, Conv2D, MaxPooling1D, MaxPooling2D, Flatten
-from keras import initializers, regularizers, constraints 
-from keras.layers import Input, Merge,Lambda, Embedding, Bidirectional, LSTM, Dense, RepeatVector
-from keras.layers import BatchNormalization
-
-
-def mat_2d_to_3d(X, agg_num, hop):
-    # pad to at least one block
-    len_X, n_in = X.shape
-    if (len_X < agg_num):
-        X = np.concatenate((X, np.zeros((agg_num-len_X, n_in))))
-        
-    len_X = len(X)
-    i1 = 0
-    X3d = []
-    while (i1+agg_num <= len_X):
-        X3d.append(X[i1:i1+agg_num])
-        i1 += hop
-    return np.array(X3d)
+from keras.layers import Input, Merge, Dense, Dropout, Conv2D, MaxPooling2D, Flatten
 
 train_x=np.load('melx.npy')
 train_y=np.load('mely.npy')
@@ -80,7 +50,7 @@ wrap = Dense(input_neurons, activation=act2,name='wrap')(h)
 score = Dense(num_classes,activation=act3,name='score')(wrap)
 
 model = Model([inpx],score)
-model.compile(loss='mse',
+model.compile(loss='categorical_crossentropy',
           optimizer='adam',
           metrics=['mae'])
 
