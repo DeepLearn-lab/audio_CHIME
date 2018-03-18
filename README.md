@@ -1,5 +1,5 @@
 # Audio Chime
-We have worked on the [Chime](http://www.cs.tut.fi/sgn/arg/dcase2016/task-audio-tagging) Audio Dataset for Audio tagging. We train on `48KHz` and test on `16KHz` Audio.
+We have worked on the **[CHIME](http://www.cs.tut.fi/sgn/arg/dcase2016/task-audio-tagging)** Audio Dataset for Audio tagging. We train on `48KHz` and test on `16KHz` Audio.
 
 ## About the Dataset
 The annotations are based on a set of 7 label classes. For each chunk, multi-label annotations were first obtained for each of 3 annotators. There are 1946 such 'strong agreement' chunks is the development dataset, and 816 such 'strong agreement' chunks in the evaluation dataset.
