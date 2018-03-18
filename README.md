@@ -33,7 +33,7 @@ which would extract these features and save it in a `.npy` file.
 ### Training
 
 We train our model on these extracted featuers. We use a deep neural network for training and testing purpose. Alteration in model can be done in `models.py` file.
-All `hyper-parameters` can be set in `universal.py`. Once you have made all the required changes por want to run on the pre-set ones, run 
+All `hyper-parameters` can be set in `universal.py`. Once you have made all the required changes or want to run on the pre-set ones, run 
 ```
 $ python MyModel.py 
 ```
