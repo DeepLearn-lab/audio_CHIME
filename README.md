@@ -18,9 +18,9 @@ $ python mainfile.py
 
 ## Detailed Task
 The process involves three steps:
-2. Feature Extraction
-3. Training on Development Dataset
-4. Testing on Evaluation Dataset
+1. Feature Extraction
+2. Training on Development Dataset
+3. Testing on Evaluation Dataset
 
 ### Feature Extraction
 
