@@ -24,7 +24,7 @@ The process involves three steps:
 
 ### Feature Extraction
 
-We are going to extract **mel** features on our Audio. Go ahead and run 
+We are going to extract **mel frequencies** features on raw audio waveforms. Go ahead and run 
 ```
 $ python feature_extraction.py
 ```
