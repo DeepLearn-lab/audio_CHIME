@@ -24,25 +24,15 @@ The process involves three steps:
 
 ### Feature Extraction
 
-We are going to extract **mel frequencies** on raw audio waveforms. Go ahead and run 
-```
-$ python feature_extraction.py
-```
-which would extract these features and save it in a `.npy` file.
+We are going to extract **mel frequencies** on raw audio waveforms. Go ahead and uncomment  
+```feature_extraction``` function which would extract these features and save it in the `.f` pickle.
 
 ### Training
 
-We train our model on these extracted featuers. We use a deep neural network for training and testing purpose. Alteration in model can be done in `models.py` file.
-All `hyper-parameters` can be set in `universal.py`. Once you have made all the required changes or want to run on the pre-set ones, run 
+We train our model on these extracted featuers. We use a convolution neural network for training and testing purpose. Alteration in model can be done in `model.py` file.
+All `hyper-parameters` can be set in `util.py`. Once you have made all the required changes or want to run on the pre-set ones, run 
 ```
-$ python MyModel.py 
-```
-
-This will save the `model` in the directory.
-
-We test using the `saved model` and use `EER` for rating our model.Run 
-```
-$ python Testing.py
+$ python mainfile.py 
 ```
 
-to get the EER.
+This will run the model which we test and use `EER` for rating our model.
