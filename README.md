@@ -1,4 +1,8 @@
 # Audio Chime
+Paper Implementation for:
+
+A convolutional neural network approach for acoustic scene classification [[Paper](https://ieeexplore.ieee.org/stamp/stamp.jsp?tp=&arnumber=7966035)]
+
 We have worked on the **[CHIME](http://www.cs.tut.fi/sgn/arg/dcase2016/task-audio-tagging)** Audio Dataset for Audio tagging. We train on `48KHz` and test on `16KHz` Audio.
 
 ## About the Dataset
